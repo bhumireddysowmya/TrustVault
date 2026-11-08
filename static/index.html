@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TrustVault</title><link rel="stylesheet" href="/static/style.css"></head><body><div class="wrap"><header><b>▣ TrustVault</b><span>PRIVATE BY DESIGN</span><small id="who"></small></header><section id="auth" class="auth"><div><small>YOUR FILES. YOUR KEYS.</small><h1>Share sensitive files.<br><i>Keep control.</i></h1><p>Files are encrypted in your browser. Only selected recipients can decrypt them. Every access attempt is recorded.</p><p class="chips">AES-256-GCM · RSA-OAEP · Signed audit trail</p></div><div class="panel"><nav><button id="login-tab" class="selected">Sign in</button><button id="reg-tab">Create account</button></nav><form id="login"><h2>Welcome back</h2><label>Email<input name="email" type="email" required></label><label>Password<input name="password" type="password" required></label><button class="primary">Sign in</button></form><form id="register" class="hide"><h2>Create your vault</h2><label>Name<input name="name" required></label><label>Email<input name="email" type="email" required></label><label>Password (10+ characters)<input name="password" type="password" minlength="10" required></label><button class="primary">Create account</button></form><p class="hint">Your private key is encrypted using your password in this browser. If you lose your password, the key cannot be recovered.</p><p id="auth-msg"></p></div></section><section id="workspace" class="hide"><div class="welcome"><div><small>YOUR WORKSPACE</small><h1>Your documents, <i>under your control.</i></h1><p>Only people with an authorized key can decrypt your files.</p></div><button id="logout" class="outline">Sign out</button></div><div class="stats"><div><small>DOCUMENTS</small><strong id="count">0</strong><p>Available to your account</p></div><div><small>ENCRYPTION</small><strong>Active</strong><p>Encrypted before upload</p></div><div><small>AUDIT CHAIN</small><strong id="audit-state">Checking</strong><p id="audit-detail">Verifying events</p></div></div><div class="columns"><div class="panel"><div class="bar"><div><small>DOCUMENT LIBRARY</small><h2>Your files</h2></div><label id="category-label">Category<select id="category"><option>General</option><option>Contracts</option><option>Finance</option><option>HR</option><option>Technical</option><option>Legal</option></select></label><div id="notice" class="hide">
+  <span id="notice-text"></span>
+  <button id="notice-ok" type="button">OK</button>
+</div>
+
+<label id="upload-label" class="upload">
+  ＋ Upload file
+  <input id="file" type="file" accept=".pdf,.doc,.docx,.txt,.png,.jpg,.jpeg,.xlsx,.pptx,.csv" hidden>
+</label>
+</div></div><div class="search-fields" style="display:flex;gap:8px;flex-wrap:wrap;margin:14px 0"><input id="search-name" placeholder="File name"><input id="search-owner" placeholder="Owner email"><input id="search-category" placeholder="Category"><input id="search-from" type="date" aria-label="From date"><input id="search-to" type="date" aria-label="To date"><button id="search-button" class="mini">Search</button><button id="clear-search" class="mini">Clear</button></div><div id="docs"></div></div><div class="panel"><small>AUDIT TRAIL</small><h2>Recent activity</h2><div id="events"></div><button id="verify" class="outline wide">Verify audit integrity</button><p id="verify-msg" class="hint"></p></div></div><div id="admin-panel" class="panel hide" style="margin-top:18px">
+    <small>ADMINISTRATION</small>
+
+    <h2>User Management</h2>
+    <p class="hint">View registered users and manage their roles.</p>
+
+    <button id="users-refresh" class="outline">Load registered users</button>
+    <div id="admin-users"></div>
+
+    <hr>
+
+    <h2>All document activity</h2>
+    <button id="admin-refresh" class="outline">Load administrative activity</button>
+    <div id="admin-events"></div>
+</div><div id="notice" class="hide">
+  <span id="notice-text"></span>
+  <button id="notice-ok" type="button">OK</button>
+</div></section><footer>TRUSTVAULT · CAMPUS PROJECT MVP · NOT FOR REAL CONFIDENTIAL DATA</footer></div><div id="modal" class="hide"><div class="modalbox"><button id="close" class="x">×</button><h2 id="modal-title"></h2><div id="modal-content"></div></div></div><script src="/static/app.js"></script>
+</body></html>
