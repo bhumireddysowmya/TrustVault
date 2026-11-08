@@ -1,4 +1,5 @@
 # TrustVault
+<<<<<<< HEAD
 
 **Secure document sharing with per-document permissions and a tamper-evident audit trail.**
 
@@ -149,3 +150,6 @@ The tests use an isolated in-memory SQLite database. They verify that an ungrant
 - Final review of `THREATS.md`, database setup, deployment, and live-system negative tests.
 
 See `API_DOCUMENTATION.md`, `THREATS.md`, `PROMPTS.md`, and `SUBMISSION_NOTES.md` for details.
+=======
+TrustVault – A secure document-sharing platform built with Python FastAPI, SQLite, HTML, CSS, and JavaScript. Features encrypted file storage, permission-based access control, secure document sharing, access revocation, and a verifiable audit trail.
+>>>>>>> a4955317a2b9c03ece852f05e15bb0508d097c1f
